@@ -1,0 +1,45 @@
+{
+  "name": "alarcronix-backend",
+  "version": "1.0.0",
+  "description": "Backend For alarcronix-backend",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "example",
+    "express",
+    "passport"
+  ],
+  "author": "Syed Redhan",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/passport/express-4.x-facebook-example.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "express-mongo-sanitize": "^2.0.2",
+    "express-session": "^1.11.3",
+    "helmet": "^4.4.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.6.1",
+    "mssql": "^6.3.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.0",
+    "util": "^0.12.3",
+    "validator": "^13.5.2",
+    "xss-clean": "^0.1.1"
+  }
+}
