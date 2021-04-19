@@ -1,7 +1,6 @@
 const connection = require('../connection');
 
 async function fetchQuery(req, res) {
-  console.log('----API.called----');
   const { cedule } = req.query;
   if (!cedule) {
     return res.status(400).json({ success: false, message: 'Invalid cedule' });
@@ -11,16 +10,14 @@ async function fetchQuery(req, res) {
     const dbConn = await connection();
 
     const [exec] = await dbConn.query(query1);
-    console.log('---API.executed---');
-    console.log(exec);
     res.status(200).json({
       success: true,
-      data: [...exec],
+      data: { ...exec[0] },
     });
   } catch (error) {
     console.log('catch.error');
     console.error(error);
-    return res.status(500).json({ status: false, error });
+    throw error;
   }
 }
 

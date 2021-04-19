@@ -11,11 +11,10 @@ const config = {
 };
 
 // create the connection
-module.exports = function () {
+module.exports = async function () {
   try {
-    mysql.createConnection(config).then((res) => {
-      return res;
-    });
+    const connection = await mysql.createConnection(config);
+    return connection;
   } catch (error) {
     console.log('catch.error');
     console.error(error);
